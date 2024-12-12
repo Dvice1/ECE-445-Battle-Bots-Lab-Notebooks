@@ -25,8 +25,8 @@ Key considerations:
 - Develop BLE communication protocol
 - Implement signal strength testing
 - Create preliminary interface code
-![Alt text](/Screenshot 2024-11-17 175043.png)
----
+
+---![Screenshot 2024-11-17 175043](https://github.com/user-attachments/assets/673a1479-8a25-4c4b-bdc5-369b2a370b0b)
 
 ## **Lab Notebook Entry**  
 **Date:** 2024-10-15  
@@ -66,6 +66,8 @@ Proposed data packet format:
 - https://docs.espressif.com/projects/esp-idf/en/stable/esp32/api-reference/bluetooth/bt_le.html
 - https://bluepad32.readthedocs.io/en/latest/
 
+![Screenshot 2024-12-12 132104](https://github.com/user-attachments/assets/95d0749c-ab4a-4faa-86c3-5cc8a64e6dc7)
+
 ---
 
 ## **Lab Notebook Entry**  
@@ -97,6 +99,8 @@ Mass estimation:
 - Minimize weight while maintaining structural integrity
 - Create mounting points for electronics
 - Ensure protection for critical components
+  
+![Screenshot 2024-10-01 165152](https://github.com/user-attachments/assets/378a3e4a-035d-437f-9961-adc526775663)
 
 ---
 
@@ -124,6 +128,8 @@ Critical Parameters:
 - Verify structural integrity
 - Measure vibrational characteristics
 - Validate impact resistance
+
+![Screenshot 2024-11-06 224822](https://github.com/user-attachments/assets/8738763e-c5a7-48c0-b4a3-255d013d0afb)
 
 ---
 
@@ -158,6 +164,8 @@ Critical Parameters:
 #### Preliminary Observations:
 - Initial tests show promise for precise motor control
 - Need to verify heat dissipation and thermal management
+  
+![Screenshot 2024-12-12 132104](https://github.com/user-attachments/assets/4c2677f2-65fa-4318-8283-7d357b9b78c5)
 
 ---
 
@@ -189,6 +197,8 @@ Current Solution:
   - 14.8V Lithium Polymer (LiPo)
   - Higher energy density
   - Potential for extended runtime
+  
+![Screenshot 2024-12-06 233611](https://github.com/user-attachments/assets/aa0bc03e-3bf6-4f1d-97dc-8fa41fbf0818)
 
 ---
 
@@ -224,3 +234,5 @@ Current Solution:
 - Potential interference in wireless communication
 - Heat dissipation challenges
 - Minor mechanical vibration concerns
+
+![Screenshot 2024-12-12 132510](https://github.com/user-attachments/assets/1aa0f1c5-b0b2-4ddd-b09e-5118149f9495)
