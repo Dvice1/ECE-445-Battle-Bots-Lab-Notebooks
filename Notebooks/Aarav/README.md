@@ -8,6 +8,8 @@
 - We decided that using the Xbox controller and incorporating BLE would be the right decision. The proposed data packet format would be 8-bit left-wheel intensity, 8-bit right-wheel intensity, 8-bit weapon motor intensity, and 8-bit system command that we would use for our kill switch. We developed some preliminary code and showed the following printing on the terminal
 ![Alt text for the image](IMG_3448.jpg.png)
 
+10/21/24:
+- We modeled our bot through CAD and this is what we got: 
 
 ## MEETINGS RECAP AND MORE:
 9/18/24:
