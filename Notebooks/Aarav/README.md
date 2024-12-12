@@ -1,3 +1,7 @@
+ALL DESIGN CONSIDERATIONS:
+
+
+MEETINGS RECAP AND MORE:
 9/18/24:
 - Met with Gregg in the machine shop. 
 
