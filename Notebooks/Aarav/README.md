@@ -36,13 +36,15 @@
   - Missing citations
   - Everything else looks good
  
-11/4/24:
+11/6/24:
 - Met over Zoom today, which was nice
 - Submitted our new board today, let's see how it goes.
 - Reminder for the individual progress report due today.
 - Also a reminder for the design doc that needs to be updated and submitted by the day after tomorrow.
 
-
+11/13/24:
+- Sign up for presentation and demo times
+- 
 
 
 
