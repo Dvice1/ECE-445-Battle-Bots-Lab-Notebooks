@@ -25,7 +25,7 @@ Key considerations:
 - Develop BLE communication protocol
 - Implement signal strength testing
 - Create preliminary interface code
-
+![Alt text](/Screenshot 2024-11-17 175043.png)
 ---
 
 ## **Lab Notebook Entry**  
