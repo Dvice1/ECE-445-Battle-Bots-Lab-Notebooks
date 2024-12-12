@@ -1,4 +1,5 @@
 ALL DESIGN CONSIDERATIONS:
+
 10/5/24:
 - Started using a PS4 controller for Bluetooth connection to the ESP32. However, there are some concerns about latency. We expect the latency to be around 1s, which is right on the border of our high-level requirement. If possible, we might pivot to using an Xbox controller since it uses BLE (Bluetooth low energy), which would be better for power and significantly reduce latency. But it is also more difficult to code. We referenced this document: https://docs.espressif.com/projects/esp-idf/en/stable/esp32/api-reference/bluetooth/index.html 
 - We also discussed what materials we should finally use. We saw suggestions about using PLA+ throughout, but need to research the use of PETG.
