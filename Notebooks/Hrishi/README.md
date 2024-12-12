@@ -101,6 +101,8 @@ Mass estimation:
 - Ensure protection for critical components
   
 ![Screenshot 2024-10-01 165152](https://github.com/user-attachments/assets/378a3e4a-035d-437f-9961-adc526775663)
+![Screenshot 2024-10-01 172913](https://github.com/user-attachments/assets/d8951db8-fac0-4f10-b728-cb2567acc61b)
+![Screenshot 2024-10-01 173120](https://github.com/user-attachments/assets/4d2d9efa-f61e-4440-92f7-9e95d3c4f1f8)
 
 ---
 
