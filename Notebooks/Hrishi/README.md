@@ -66,7 +66,7 @@ Proposed data packet format:
 - https://docs.espressif.com/projects/esp-idf/en/stable/esp32/api-reference/bluetooth/bt_le.html
 - https://bluepad32.readthedocs.io/en/latest/
 
-![Screenshot 2024-12-12 132104](https://github.com/user-attachments/assets/95d0749c-ab4a-4faa-86c3-5cc8a64e6dc7)
+![Screenshot 2024-12-12 133447](https://github.com/user-attachments/assets/b21e1473-e41b-406d-949d-880b2ef111a2)
 
 ---
 
