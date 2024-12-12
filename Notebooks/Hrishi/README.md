@@ -1,6 +1,6 @@
 # Lab Notebook 2024
 
-## **Lab Notebook Entry**  
+## **Lab Notebook Entry #1**  
 **Date:** 2024-05-10  
 **Project:** Antweight Battle Bot - Wireless Control Subsystem  
 
@@ -28,7 +28,7 @@ Key considerations:
 
 ---![Screenshot 2024-11-17 175043](https://github.com/user-attachments/assets/673a1479-8a25-4c4b-bdc5-369b2a370b0b)
 
-## **Lab Notebook Entry**  
+## **Lab Notebook Entry #2**  
 **Date:** 2024-10-15  
 **Project:** Antweight Battle Bot - Wireless Communication Protocol  
 
@@ -70,7 +70,7 @@ Proposed data packet format:
 
 ---
 
-## **Lab Notebook Entry**  
+## **Lab Notebook Entry #3**  
 **Date:** 2024-10-21  
 **Project:** Antweight Battle Bot - Mechanical Design and Prototyping  
 
@@ -104,7 +104,7 @@ Mass estimation:
 
 ---
 
-## **Lab Notebook Entry**  
+## **Lab Notebook Entry #4**  
 **Date:** 2024-11-05  
 **Project:** Antweight Battle Bot - Weapon System Design  
 
@@ -133,7 +133,7 @@ Critical Parameters:
 
 ---
 
-## **Lab Notebook Entry**  
+## **Lab Notebook Entry #5**  
 **Date:** 2024-11-15  
 **Project:** Antweight Battle Bot - Motor Control System  
 
@@ -169,7 +169,7 @@ Critical Parameters:
 
 ---
 
-## **Lab Notebook Entry**  
+## **Lab Notebook Entry #5**  
 **Date:** 2024-11-25  
 **Project:** Antweight Battle Bot - Power Subsystem Optimization  
 
@@ -202,7 +202,7 @@ Current Solution:
 
 ---
 
-## **Lab Notebook Entry**  
+## **Lab Notebook Entry #6**  
 **Date:** 2024-12-03  
 **Project:** Antweight Battle Bot - Final Integration Testing  
 
