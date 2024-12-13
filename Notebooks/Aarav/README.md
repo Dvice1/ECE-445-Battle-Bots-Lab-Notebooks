@@ -9,7 +9,15 @@
 ![Alt text for the image](IMG_3448.jpg.png)
 
 10/21/24:
-- We modeled our bot through CAD and this is what we got: 
+- We modeled our bot through CAD and this is what we got:
+
+
+10/28/24:
+I performed a tolerance analysis on our weapon. Here are the equations used:
+- Moment of inertia (I): I = (1/2) × m × r² = 0.5 × 0.15 kg × (0.09 m)² = 0.000608 kg·m²
+- Angular velocity (ω): 750 r/min = 78.54 rad/s
+- Impact force capacity: F = m × r × ω² = 0.15 kg × 0.09 m × (78.54 rad/s) ² = 69.5 N
+- Rotational kinetic energy: E = (1/2) × I × ω² = 1.87 J
 
 ## MEETINGS RECAP, NOTES AND MORE:
 9/18/24:
