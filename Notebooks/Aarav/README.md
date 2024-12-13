@@ -19,6 +19,11 @@ I performed a tolerance analysis on our weapon. Here are the equations used:
 - Impact force capacity: F = m × r × ω² = 0.15 kg × 0.09 m × (78.54 rad/s) ² = 69.5 N
 - Rotational kinetic energy: E = (1/2) × I × ω² = 1.87 J
 
+12/1/24:
+- 3D printed our parts using the 2070 lab 3D printer. Here is the final bot, ready to demo, with everything inside:
+![Alt text for the image](Finalbot.png)
+
+
 ## MEETINGS RECAP, NOTES AND MORE:
 9/18/24:
 - Met with Gregg in the machine shop. 
