@@ -21,6 +21,7 @@ I performed a tolerance analysis on our weapon. Here are the equations used:
 
 11/31/24:
 Finalized our BLE code snippet. Everything works with this:
+```
 #include <Bluepad32.h>
 
 ControllerPtr myControllers[BP32_MAX_GAMEPADS];
@@ -188,6 +189,7 @@ void loop() {
 
     delay(150);  // Yield to lower priority tasks
 }
+```
 
 12/1/24:
 - 3D printed our parts using the 2070 lab 3D printer. Here is the final bot, ready to demo, with everything inside:
