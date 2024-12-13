@@ -90,6 +90,9 @@ I performed a tolerance analysis on our weapon. Here are the equations used:
 - Placed an order for parts through myECE:
 ![Alt text for the image](myecepinheaders.png)
 
+12/12/24:
+- Looking back at this class today with tremendous joy. Chi was an amazing TA, we got our project fully working and had a great demo and presentation. Thoroughly enjoyed it!
+
 
 ## References/Citations
 - "How to use L293D motor driver with ESP32," YouTube, uploaded by Arnov Sharma, 6 Jul 2020. [Online]. Available: https://www.youtube.com/watch?v=aDBF9Yj04MU [Accessed: Dec. 11 2024].
