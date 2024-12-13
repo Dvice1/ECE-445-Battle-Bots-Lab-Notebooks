@@ -63,10 +63,28 @@ I performed a tolerance analysis on our weapon. Here are the equations used:
 - Submitted our new board today, let's see how it goes.
 - Reminder for the individual progress report due today.
 - Also a reminder for the design doc that needs to be updated and submitted by the day after tomorrow.
+- Here is what our 4th round board looks like:
+![Alt text for the image](SchematicWeek3.png)
+![Alt text for the image](PCBWeek3.png)
+
+11/11/24:
+- Placed an order for all parts for our final PCB. We also picked some stuff up from the machine shop:
+  - Resistors: 5.1k, 1k and 10k
+  - Capacitors 0805: 0.1uF (needed 1205 so this was wrong and reordered with other parts.
+ 
+![Alt text for the image](myeceparts.png)
 
 11/13/24:
 - Sign up for presentation and demo times.
 - Make sure to wear business casuals for the presentation.
+- We missed an order deadline so order the final PCB ourselves. Here is the PCB and Schemtic:
+![Alt text for the image](FinalSchematic.png)
+![Alt text for the image](PCBFinal.png)
+
+11/23/24:
+- Placed an order for parts through myECE:
+![Alt text for the image](myecepinheaders.png)
+
 
 ## References/Citations
 - "How to use L293D motor driver with ESP32," YouTube, uploaded by Arnov Sharma, 6 Jul 2020. [Online]. Available: https://www.youtube.com/watch?v=aDBF9Yj04MU [Accessed: Dec. 11 2024].
