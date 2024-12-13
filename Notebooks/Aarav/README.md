@@ -19,6 +19,176 @@ I performed a tolerance analysis on our weapon. Here are the equations used:
 - Impact force capacity: F = m × r × ω² = 0.15 kg × 0.09 m × (78.54 rad/s) ² = 69.5 N
 - Rotational kinetic energy: E = (1/2) × I × ω² = 1.87 J
 
+11/31/24:
+Finalized our BLE code snippet. Everything works with this:
+#include <Bluepad32.h>
+
+ControllerPtr myControllers[BP32_MAX_GAMEPADS];
+
+// Motor control pins (GPIOs)
+const int EN1 = 13, IN1 = 18, IN2 = 32; // Motor 1
+const int EN2 = 26, IN3 = 25, IN4 = 33; // Motor 2
+const int EN3 = 27, IN5 = 12, IN6 = 14; // Motor 3
+
+// Deadzone value
+const int DEADZONE = 50;
+
+// Initialize motor pins
+void setupMotorPins() {
+    pinMode(EN1, OUTPUT);
+    pinMode(IN1, OUTPUT);
+    pinMode(IN2, OUTPUT);
+    pinMode(EN2, OUTPUT);
+    pinMode(IN3, OUTPUT);
+    pinMode(IN4, OUTPUT);
+    pinMode(EN3, OUTPUT);
+    pinMode(IN5, OUTPUT);
+    pinMode(IN6, OUTPUT);
+
+    // Start all motors off (low PWM signal)
+    analogWrite(EN1, 0);
+    analogWrite(EN2, 0);
+    analogWrite(EN3, 0);
+    digitalWrite(IN1, LOW);
+    digitalWrite(IN2, LOW);
+    digitalWrite(IN3, LOW);
+    digitalWrite(IN4, LOW);
+    digitalWrite(IN5, LOW);
+    digitalWrite(IN6, LOW);
+}
+
+// Function to apply deadzone
+int applyDeadzone(int value) {
+    if (abs(value) < DEADZONE) {
+        return 0;  // Inside the deadzone, return 0
+    }
+    return value;
+}
+
+void onConnectedController(ControllerPtr ctl) {
+    bool foundEmptySlot = false;
+    for (int i = 0; i < BP32_MAX_GAMEPADS; i++) {
+        if (myControllers[i] == nullptr) {
+            Serial.printf("CALLBACK: Controller is connected, index=%d\n", i);
+            myControllers[i] = ctl;
+            foundEmptySlot = true;
+            break;
+        }
+    }
+    if (!foundEmptySlot) {
+        Serial.println("CALLBACK: Controller connected, but could not found empty slot");
+    }
+}
+
+void onDisconnectedController(ControllerPtr ctl) {
+    bool foundController = false;
+    for (int i = 0; i < BP32_MAX_GAMEPADS; i++) {
+        if (myControllers[i] == ctl) {
+            Serial.printf("CALLBACK: Controller disconnected from index=%d\n", i);
+            myControllers[i] = nullptr;
+            foundController = true;
+            break;
+        }
+    }
+    if (!foundController) {
+        Serial.println("CALLBACK: Controller disconnected, but not found in myControllers");
+    }
+}
+
+// Control motors based on the input from the gamepad
+void controlMotors(ControllerPtr ctl) {
+    // Read the Y-axis of the left stick (motor 1 control)
+    int motor1Speed = applyDeadzone(ctl->axisY());  // Range is from -511 to 512
+    int pwm1 = map(motor1Speed, -511, 512, -255, 255);
+    
+    // Set motor 1 direction and speed
+    if (pwm1 > 0) {
+        digitalWrite(IN1, HIGH);
+        digitalWrite(IN2, LOW);
+    } else if (pwm1 < 0) {
+        digitalWrite(IN1, LOW);
+        digitalWrite(IN2, HIGH);
+    } else {
+        digitalWrite(IN1, LOW);
+        digitalWrite(IN2, LOW);
+    }
+    analogWrite(EN1, abs(pwm1));  // Control the speed (PWM)
+
+    // Read the Y-axis of the right stick (motor 2 control)
+    int motor2Speed = applyDeadzone(ctl->axisRY());  // Range is from -511 to 512
+    int pwm2 = map(motor2Speed, -511, 512, -255, 255);
+    
+    // Set motor 2 direction and speed
+    if (pwm2 > 0) {
+        digitalWrite(IN3, HIGH);
+        digitalWrite(IN4, LOW);
+    } else if (pwm2 < 0) {
+        digitalWrite(IN3, LOW);
+        digitalWrite(IN4, HIGH);
+    } else {
+        digitalWrite(IN3, LOW);
+        digitalWrite(IN4, LOW);
+    }
+    analogWrite(EN2, abs(pwm2));  // Control the speed (PWM)
+
+    // Read the throttle (right trigger) for motor 3 control
+    int motor3Speed = applyDeadzone(ctl->throttle());  // Range is from 0 to 1023
+    int pwm3 = map(motor3Speed, 0, 1023, 0, 255);
+
+    // Set motor 3 direction and speed
+    if (motor3Speed > 0) {
+        digitalWrite(IN5, HIGH);
+        digitalWrite(IN6, LOW);
+    } else {
+        digitalWrite(IN5, LOW);
+        digitalWrite(IN6, LOW);
+    }
+    analogWrite(EN3, pwm3);  // Control the speed (PWM)
+}
+
+void processGamepad(ControllerPtr ctl) {
+    controlMotors(ctl);  // Control motors based on gamepad input
+}
+
+void processControllers() {
+    for (auto myController : myControllers) {
+        if (myController && myController->isConnected() && myController->hasData()) {
+            if (myController->isGamepad()) {
+                processGamepad(myController);
+            }
+        }
+    }
+}
+
+// Arduino setup function. Runs in CPU 1
+void setup() {
+    Serial.begin(115200);
+    Serial.printf("Firmware: %s\n", BP32.firmwareVersion());
+    const uint8_t* addr = BP32.localBdAddress();
+    Serial.printf("BD Addr: %2X:%2X:%2X:%2X:%2X:%2X\n", addr[0], addr[1], addr[2], addr[3], addr[4], addr[5]);
+
+    // Setup the Bluepad32 callbacks
+    BP32.setup(&onConnectedController, &onDisconnectedController);
+
+    // Forget Bluetooth keys (optional)
+    BP32.forgetBluetoothKeys();
+
+    // Setup motor control pins
+    setupMotorPins();
+
+    // Enable virtual devices (optional)
+    BP32.enableVirtualDevice(false);
+}
+
+// Arduino loop function. Runs in CPU 1.
+void loop() {
+    bool dataUpdated = BP32.update();
+    if (dataUpdated)
+        processControllers();
+
+    delay(150);  // Yield to lower priority tasks
+}
+
 12/1/24:
 - 3D printed our parts using the 2070 lab 3D printer. Here is the final bot, ready to demo, with everything inside:
 ![Alt text for the image](Finalbot.png)
