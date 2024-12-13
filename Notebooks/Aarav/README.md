@@ -10,7 +10,7 @@
 
 10/21/24:
 - We modeled our bot through CAD and this is what we got:
-
+![Alt text for the image](CADbot.png)
 
 10/28/24:
 I performed a tolerance analysis on our weapon. Here are the equations used:
@@ -65,8 +65,8 @@ I performed a tolerance analysis on our weapon. Here are the equations used:
 - Also a reminder for the design doc that needs to be updated and submitted by the day after tomorrow.
 
 11/13/24:
-- Sign up for presentation and demo times
-- 
+- Sign up for presentation and demo times.
+- Make sure to wear business casuals for the presentation.
 
 ## References/Citations
 - "How to use L293D motor driver with ESP32," YouTube, uploaded by Arnov Sharma, 6 Jul 2020. [Online]. Available: https://www.youtube.com/watch?v=aDBF9Yj04MU [Accessed: Dec. 11 2024].
