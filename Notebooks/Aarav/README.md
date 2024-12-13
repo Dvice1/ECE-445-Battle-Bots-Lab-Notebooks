@@ -11,7 +11,7 @@
 10/21/24:
 - We modeled our bot through CAD and this is what we got: 
 
-## MEETINGS RECAP AND MORE:
+## MEETINGS RECAP, NOTES AND MORE:
 9/18/24:
 - Met with Gregg in the machine shop. 
 
